@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: human-design-api
+    env: dotnet
+    buildCommand: dotnet restore
+    startCommand: dotnet run --project HumanDesignWebAPI.csproj
+    envVars:
+      - key: ASPNETCORE_URLS
+        value: http://0.0.0.0:10000
+    plan: free
